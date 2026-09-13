@@ -52,4 +52,15 @@ fun GreetingPreview() {
 
     }
 }
-
+@Preview(showBackground = true)
+@Composable
+fun GreetingFullScreenPreview() {
+    Demo01Theme {
+        Greeting(
+            "Android",
+            modifier = Modifier
+                .fillMaxSize()
+                .background(color = Color.LightGray),
+            )
+    }
+}
