@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import pe.cibertc.demo01.ui.screens.LoginScreen
 import pe.cibertc.demo01.ui.theme.Demo01Theme
 
 class MainActivity : ComponentActivity() {
@@ -22,8 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Demo01Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Demo",
+                    LoginScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -48,7 +48,7 @@ fun Greeting(
 @Composable
 fun GreetingPreview() {
     Demo01Theme {
-        Greeting("Android")
+        LoginScreen()
 
     }
 }
@@ -56,8 +56,7 @@ fun GreetingPreview() {
 @Composable
 fun GreetingFullScreenPreview() {
     Demo01Theme {
-        Greeting(
-            "Android",
+        LoginScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .background(color = Color.LightGray),
